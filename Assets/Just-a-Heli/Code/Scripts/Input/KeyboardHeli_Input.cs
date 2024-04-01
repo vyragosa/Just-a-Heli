@@ -49,7 +49,8 @@ namespace JaH
             HandleCollective();
             HandleCyclic();
             HandlePedal();
-            
+
+            ClampInputs();
         }
 
         protected virtual void HandleThrottle()
@@ -72,6 +73,15 @@ namespace JaH
         {
             pedalInput = Input.GetAxis("Pedal");
         }
+
+        protected void ClampInputs()
+        {
+            throttleInput = Mathf.Clamp(throttleInput, -1f, 1f);
+            collectiveInput = Mathf.Clamp(collectiveInput, -1f, 1f);
+            cyclicInput = Vector2.ClampMagnitude(cyclicInput, 1);
+            pedalInput = Mathf.Clamp(pedalInput, -1f, 1f);
+        }
+
         #endregion
 
     }

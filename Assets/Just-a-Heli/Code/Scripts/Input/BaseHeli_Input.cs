@@ -28,6 +28,7 @@ namespace JaH
             vertical = Input.GetAxis("Vertical");
             horizontal = Input.GetAxis("Horizontal");
         }
+
         #endregion
     }
 
