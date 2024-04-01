@@ -5,7 +5,7 @@ using UnityEngine;
 namespace IndiePixel
 {
     [RequireComponent(typeof(Rigidbody))]
-    public class IP_Hover_Object : MonoBehaviour
+    public class Hover_Object : MonoBehaviour
     {
         #region Variables
         [Header("Hover Object Properties")]

@@ -5,7 +5,7 @@ using UnityEngine;
 namespace IndiePixel
 {
     [RequireComponent(typeof(Rigidbody))]
-    public class IP_BaseRB_Controller : MonoBehaviour
+    public class BaseRB_Controller : MonoBehaviour
     {
         #region Variables
         [Header("Base Properties")]
