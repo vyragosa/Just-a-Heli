@@ -4,17 +4,19 @@ using UnityEngine;
 
 namespace JaH
 {
+    [RequireComponent(typeof(Input_Controller), typeof(KeyboardHeli_Input), typeof(XboxHeli_Input))]
     public class Heli_Controller : BaseRB_Controller
     {
         #region Variables
-        [Header("Controller Properties")]
-        public Input_Controller input;
+        // [Header("Controller Properties")]
+        private Input_Controller input;
         #endregion
 
         #region Custom Methods
 
         protected override void HandlePhysics()
         {
+            input = GetComponent<Input_Controller>();
             if (input)
             {
                 HandleEngines();
@@ -23,6 +25,10 @@ namespace JaH
             
         }
 
+        #endregion
+
+
+        #region Helicopter Controle Methods
         protected virtual void HandleEngines()
         {
 

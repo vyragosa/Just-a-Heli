@@ -10,6 +10,8 @@ namespace JaH
         #region Variables
         [Header("Base Properties")]
         protected Rigidbody rb;
+        public float weight = 10f;
+        public Transform cog;
         #endregion
 
 
@@ -18,7 +20,12 @@ namespace JaH
         public virtual void Start()
         {
             rb = GetComponent<Rigidbody>();
+            if (rb != null)
+            {
+                rb.mass = weight; 
+            }
         }
+
 
         // Update is called once per frame
         void FixedUpdate()
