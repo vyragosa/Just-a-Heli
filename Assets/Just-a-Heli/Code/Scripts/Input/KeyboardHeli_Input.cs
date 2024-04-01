@@ -5,7 +5,7 @@ using UnityEngine.UIElements;
 
 namespace JaH
 {
-    public class Keyboard_Input : BaseHeli_Input
+    public class KeyboardHeli_Input : BaseHeli_Input
     {
         #region Variables
         // [Header("Heli Keyboard Inputs")]
