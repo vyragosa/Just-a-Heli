@@ -796,6 +796,34 @@ PrefabInstance:
       propertyPath: rotorCtrl
       value: 
       objectReference: {fileID: 1260664535}
+    - target: {fileID: 3804404403919255818, guid: 7a29232d7d78ef04dad953e9c9d8925a, type: 3}
+      propertyPath: powerDelay
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3804404403919255818, guid: 7a29232d7d78ef04dad953e9c9d8925a, type: 3}
+      propertyPath: powerCurve.m_Curve.Array.data[0].inSlope
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3804404403919255818, guid: 7a29232d7d78ef04dad953e9c9d8925a, type: 3}
+      propertyPath: powerCurve.m_Curve.Array.data[1].inSlope
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3804404403919255818, guid: 7a29232d7d78ef04dad953e9c9d8925a, type: 3}
+      propertyPath: powerCurve.m_Curve.Array.data[0].outSlope
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3804404403919255818, guid: 7a29232d7d78ef04dad953e9c9d8925a, type: 3}
+      propertyPath: powerCurve.m_Curve.Array.data[1].outSlope
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3804404403919255818, guid: 7a29232d7d78ef04dad953e9c9d8925a, type: 3}
+      propertyPath: powerCurve.m_Curve.Array.data[0].tangentMode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3804404403919255818, guid: 7a29232d7d78ef04dad953e9c9d8925a, type: 3}
+      propertyPath: powerCurve.m_Curve.Array.data[1].tangentMode
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4398258079887799470, guid: 7a29232d7d78ef04dad953e9c9d8925a, type: 3}
       propertyPath: m_Name
       value: R22_Rotors_TailMast_Geo
