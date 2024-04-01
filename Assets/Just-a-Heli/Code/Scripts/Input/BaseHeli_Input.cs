@@ -1,0 +1,34 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+
+namespace JaH
+{
+    public class BaseHeli_Input : MonoBehaviour
+    {
+        #region Variables
+        [Header("Base Input Properties")]
+        public float vertical = 0f;
+        public float horizontal = 0f;
+        #endregion
+
+        #region BuildIn Methods
+
+        // Update is called once per frame
+        void Update()
+        {
+            HandleInputs();
+        }
+        #endregion
+
+        #region CustomMethods
+        protected virtual void HandleInputs()
+        {
+            vertical = Input.GetAxis("Vertical");
+            horizontal = Input.GetAxis("Horizontal");
+        }
+        #endregion
+    }
+
+}
