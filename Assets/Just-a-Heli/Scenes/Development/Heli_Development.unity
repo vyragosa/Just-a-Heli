@@ -788,18 +788,104 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2132154151347550459, guid: 7a29232d7d78ef04dad953e9c9d8925a, type: 3}
+      propertyPath: m_UseGravity
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2153890725093841276, guid: 7a29232d7d78ef04dad953e9c9d8925a, type: 3}
       propertyPath: rotorCtrl
       value: 
       objectReference: {fileID: 1260664535}
+    - target: {fileID: 4398258079887799470, guid: 7a29232d7d78ef04dad953e9c9d8925a, type: 3}
+      propertyPath: m_Name
+      value: R22_Rotors_TailMast_Geo
+      objectReference: {fileID: 0}
+    - target: {fileID: 4623214437948026494, guid: 7a29232d7d78ef04dad953e9c9d8925a, type: 3}
+      propertyPath: m_Name
+      value: R22_Rotors_Mast_Geo
+      objectReference: {fileID: 0}
+    - target: {fileID: 5418278328661641219, guid: 7a29232d7d78ef04dad953e9c9d8925a, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5418278328661641219, guid: 7a29232d7d78ef04dad953e9c9d8925a, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5418278328661641219, guid: 7a29232d7d78ef04dad953e9c9d8925a, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5418278328661641219, guid: 7a29232d7d78ef04dad953e9c9d8925a, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5418278328661641219, guid: 7a29232d7d78ef04dad953e9c9d8925a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5418278328661641219, guid: 7a29232d7d78ef04dad953e9c9d8925a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8846960854271327729, guid: 7a29232d7d78ef04dad953e9c9d8925a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8993784008430485053, guid: 7a29232d7d78ef04dad953e9c9d8925a, type: 3}
+      propertyPath: m_Name
+      value: R22_Rotors_MainMast_Geo
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 8993784008430485053, guid: 7a29232d7d78ef04dad953e9c9d8925a, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 6688674869360295132, guid: 7a29232d7d78ef04dad953e9c9d8925a, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1260664535}
+    - targetCorrespondingSourceObject: {fileID: 4623214437948026494, guid: 7a29232d7d78ef04dad953e9c9d8925a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4054568849560647044}
+    - targetCorrespondingSourceObject: {fileID: 3150486506335895187, guid: 7a29232d7d78ef04dad953e9c9d8925a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4054568849560647043}
   m_SourcePrefab: {fileID: 100100000, guid: 7a29232d7d78ef04dad953e9c9d8925a, type: 3}
+--- !u!1 &4054568849560647041 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3150486506335895187, guid: 7a29232d7d78ef04dad953e9c9d8925a, type: 3}
+  m_PrefabInstance: {fileID: 4054568849560647040}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &4054568849560647042 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4623214437948026494, guid: 7a29232d7d78ef04dad953e9c9d8925a, type: 3}
+  m_PrefabInstance: {fileID: 4054568849560647040}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &4054568849560647043
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4054568849560647041}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98784e0c091792a4694c8ca02afb5b17, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotationSpeedModifier: 1.5
+--- !u!114 &4054568849560647044
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4054568849560647042}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 379dc60d688a7dd43870b71f906102e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
