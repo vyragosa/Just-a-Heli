@@ -9,14 +9,15 @@ namespace JaH
         Keyboard,
         Xbox,
     }
+    [RequireComponent(typeof(KeyboardHeli_Input), typeof(XboxHeli_Input))]
     public class Input_Controller : MonoBehaviour
     {
         #region Variables
-        public InputType inputType = InputType.Keyboard;
+        [Header("Input Properties")]
+        public InputType inputType = InputType.Xbox;
 
-        [Header("Input Components")]
-        public KeyboardHeli_Input keyInput;
-        public XboxHeli_Input xboxInput;
+        private KeyboardHeli_Input keyInput;
+        private XboxHeli_Input xboxInput;
         #endregion
 
 
@@ -24,27 +25,29 @@ namespace JaH
         // Start is called before the first frame update
         void Start()
         {
-            SetInputType(inputType);
+            keyInput = GetComponent<KeyboardHeli_Input>();
+            xboxInput = GetComponent<XboxHeli_Input>();
+            if (keyInput && xboxInput)
+            {
+                SetInputType(inputType);
+            }
         }
         #endregion
 
         #region Custom Methods
         void SetInputType(InputType type)
         {
-            if (keyInput && xboxInput) 
+            if (inputType == InputType.Keyboard)
             {
-                if (inputType == InputType.Keyboard)
-                {
-                    keyInput.enabled = true;
-                    xboxInput.enabled = false;
-                }
+                keyInput.enabled = true;
+                xboxInput.enabled = false;
+            }
 
-                if (inputType == InputType.Xbox)
-                {
-                    xboxInput.enabled = true;
-                    keyInput.enabled = false;
-                }
-            } 
+            if (inputType == InputType.Xbox)
+            {
+                xboxInput.enabled = true;
+                keyInput.enabled = false;
+            }  
         }
         #endregion
 

@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace JaH
 {
-    [RequireComponent(typeof(Input_Controller), typeof(KeyboardHeli_Input), typeof(XboxHeli_Input))]
+    [RequireComponent(typeof(Input_Controller))]
     public class Heli_Controller : BaseRB_Controller
     {
         #region Variables

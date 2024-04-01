@@ -954,8 +954,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inputType: 0
-  keyInput: {fileID: 0}
-  xboxInput: {fileID: 0}
 --- !u!54 &2110126175
 Rigidbody:
   m_ObjectHideFlags: 0
