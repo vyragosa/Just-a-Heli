@@ -35,7 +35,7 @@ namespace JaH
             EditorGUILayout.Space();
 
             EditorGUI.indentLevel++;
-            EditorGUILayout.LabelField("Throttle:\t" + targetInput.ThrottleInput.ToString("0.00"), EditorStyles.boldLabel);
+            EditorGUILayout.LabelField("Throttle:\t" + targetInput.RawThrottleInput.ToString("0.00"), EditorStyles.boldLabel);
             EditorGUILayout.LabelField("Collective:\t" + targetInput.CollectiveInput.ToString("0.00"), EditorStyles.boldLabel);
             EditorGUILayout.LabelField("Cyclic:\t\t"+ targetInput.CyclicInput.ToString("0.00"), EditorStyles.boldLabel);
             EditorGUILayout.LabelField("Pedal:\t\t" + targetInput.PedalInput.ToString("0.00"), EditorStyles.boldLabel);

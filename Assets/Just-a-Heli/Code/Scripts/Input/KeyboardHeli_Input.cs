@@ -14,9 +14,15 @@ namespace JaH
         #region Properties
 
         protected float throttleInput = 0f;
-        public float ThrottleInput
+        public float RawThrottleInput
         {
             get { return throttleInput; }
+        }
+
+        protected float stickyThrottle = 0f;
+        public float StickyThrotle
+        { 
+            get { return stickyThrottle; } 
         }
 
         protected float collectiveInput = 0f;
@@ -45,11 +51,15 @@ namespace JaH
         protected override void HandleInputs()
         {
             base.HandleInputs();
+
+            // входные значения
             HandleThrottle();
             HandleCollective();
             HandleCyclic();
             HandlePedal();
 
+            // улучшения
+            HandleStickyThrottle();
             ClampInputs();
         }
 
@@ -82,6 +92,13 @@ namespace JaH
             pedalInput = Mathf.Clamp(pedalInput, -1f, 1f);
         }
 
+
+        protected void HandleStickyThrottle()
+        {
+            stickyThrottle += RawThrottleInput * Time.deltaTime;
+            stickyThrottle = Mathf.Clamp01(stickyThrottle);
+            // Debug.Log(stickyThrottle);
+        }
         #endregion
 
     }

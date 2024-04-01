@@ -25,6 +25,12 @@ namespace JaH
             get { return throttleInput; }
         }
 
+        private float stickyThrottle;
+        public float StickyThrottle
+        {
+            get { return stickyThrottle; }
+        }
+
         private float collectiveInput;
         public float CollectiveInput
         {
@@ -64,17 +70,19 @@ namespace JaH
                 switch (inputType)
                 {
                     case InputType.Keyboard:
-                        throttleInput = keyInput.ThrottleInput;
+                        throttleInput = keyInput.RawThrottleInput;
                         collectiveInput = keyInput.CollectiveInput;
                         cyclicInput = keyInput.CyclicInput;
                         pedalInput = keyInput.PedalInput;
+                        stickyThrottle = keyInput.StickyThrotle;
                         break;
 
                     case InputType.Xbox:
-                        throttleInput = xboxInput.ThrottleInput;
+                        throttleInput = xboxInput.RawThrottleInput;
                         collectiveInput = xboxInput.CollectiveInput;
                         cyclicInput = xboxInput.CyclicInput;
                         pedalInput = xboxInput.PedalInput;
+                        stickyThrottle = xboxInput.StickyThrotle;
                         break;
 
                     default:
