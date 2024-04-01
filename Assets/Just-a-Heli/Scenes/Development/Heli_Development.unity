@@ -335,6 +335,23 @@ Transform:
   - {fileID: 629447587}
   m_Father: {fileID: 519833364}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1260664533 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6688674869360295132, guid: 7a29232d7d78ef04dad953e9c9d8925a, type: 3}
+  m_PrefabInstance: {fileID: 4054568849560647040}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1260664535
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1260664533}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90fcd7483ebc0e3449c8d0828f54d247, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1777828482
 GameObject:
   m_ObjectHideFlags: 0
@@ -771,10 +788,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2153890725093841276, guid: 7a29232d7d78ef04dad953e9c9d8925a, type: 3}
+      propertyPath: rotorCtrl
+      value: 
+      objectReference: {fileID: 1260664535}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6688674869360295132, guid: 7a29232d7d78ef04dad953e9c9d8925a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1260664535}
   m_SourcePrefab: {fileID: 100100000, guid: 7a29232d7d78ef04dad953e9c9d8925a, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
