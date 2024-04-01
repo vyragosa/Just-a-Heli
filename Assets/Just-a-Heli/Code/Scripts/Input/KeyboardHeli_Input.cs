@@ -25,8 +25,8 @@ namespace JaH
             get { return collectiveInput; }
         }
 
-        private float cyclicInput = 0f;
-        public float CyclicInput
+        private Vector2 cyclicInput = Vector2.zero;
+        public Vector2 CyclicInput
         {
             get { return cyclicInput; }
         }
@@ -45,10 +45,35 @@ namespace JaH
         protected override void HandleInputs()
         {
             base.HandleInputs();
-            throttleInput = vertical;
-            pedalInput = horizontal;
+            HandleThrottle();
+            HandleCollective();
+            HandleCyclic();
+            HandlePedal();
+            
+        }
+
+        void HandleThrottle()
+        {
+
+        }
+
+        void HandleCollective()
+        {
+
+        }
+
+        void HandleCyclic()
+        {
+            cyclicInput.y = vertical;
+            cyclicInput.x = horizontal;
+        }
+
+        void HandlePedal()
+        {
+
         }
         #endregion
+
     }
 
 }
