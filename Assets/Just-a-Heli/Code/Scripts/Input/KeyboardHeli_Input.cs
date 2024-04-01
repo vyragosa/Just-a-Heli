@@ -36,7 +36,7 @@ namespace JaH
         {
             get { return pedalInput; }
         }
-        #region
+        #endregion
 
         #region BuildIn Methods
         #endregion
