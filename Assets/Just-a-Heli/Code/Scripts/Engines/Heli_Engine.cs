@@ -10,7 +10,7 @@ namespace JaH
         public float maxHP = 140f;
         public float maxRPM = 2700;
         public float powerDelay = 2f;
-
+        public AnimationCurve powerCurve = new AnimationCurve(new Keyframe(0f, 0f), new Keyframe(1f, 1f));
         #endregion
 
         #region Properties
@@ -46,6 +46,8 @@ namespace JaH
            currentHP = Mathf.Lerp(currentHP, wantedHP, Time.deltaTime * powerDelay);
 
             //Вычисление оборотов в минуту
+            float wantedRPM = throttleInput * maxRPM;
+            currentRPM = Mathf.Lerp(currentRPM, wantedRPM, Time.deltaTime * powerDelay);
 
         }
         #endregion

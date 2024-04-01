@@ -36,6 +36,8 @@ namespace JaH
             for (int i = 0; i < engines.Count; i++)
             {
                 engines[i].UpdateEngine(input.TrottleInput);
+                float finalPower = engines[i].CurrentHP;
+                Debug.Log(finalPower);
             }
         }
         protected virtual void HandleCharaceristics()
