@@ -42,7 +42,7 @@ namespace JaH
         public void UpdateEngine(float throttleInput)
         {
            // Вычисление лошадиных сил
-           float wantedHP = throttleInput * maxHP;
+           float wantedHP = powerCurve.Evaluate(throttleInput) * maxHP;
            currentHP = Mathf.Lerp(currentHP, wantedHP, Time.deltaTime * powerDelay);
 
             //Вычисление оборотов в минуту
