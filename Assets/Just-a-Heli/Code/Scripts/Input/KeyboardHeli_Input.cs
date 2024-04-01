@@ -54,12 +54,12 @@ namespace JaH
 
         void HandleThrottle()
         {
-
+            throttleInput = Input.GetAxis("Throttle");
         }
 
         void HandleCollective()
         {
-
+            collectiveInput = Input.GetAxis("Collective");
         }
 
         void HandleCyclic()
@@ -70,7 +70,7 @@ namespace JaH
 
         void HandlePedal()
         {
-
+            pedalInput = Input.GetAxis("Pedal");
         }
         #endregion
 

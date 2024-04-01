@@ -937,10 +937,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9e98eeef9773bb47abc35f042ddd01a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  throttleInput: 0
-  collectiveInput: 0
-  cyclicInput: 0
-  pedalInput: 0
 --- !u!1 &2117448363
 GameObject:
   m_ObjectHideFlags: 0
