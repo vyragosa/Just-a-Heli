@@ -10,6 +10,7 @@ namespace JaH
         public float maxHP = 140f;
         public float maxRPM = 2700;
         public float powerDelay = 2f;
+
         #endregion
 
         #region Properties
@@ -40,7 +41,12 @@ namespace JaH
         #region Custom Methods
         public void UpdateEngine(float throttleInput)
         {
-            
+           // Вычисление лошадиных сил
+           float wantedHP = throttleInput * maxHP;
+           currentHP = Mathf.Lerp(currentHP, wantedHP, Time.deltaTime * powerDelay);
+
+            //Вычисление оборотов в минуту
+
         }
         #endregion
     }
