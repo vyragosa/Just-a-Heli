@@ -45,9 +45,10 @@ namespace JaH
            float wantedHP = powerCurve.Evaluate(throttleInput) * maxHP;
            currentHP = Mathf.Lerp(currentHP, wantedHP, Time.deltaTime * powerDelay);
 
-           //Вычисление оборотов в минуту
-           float wantedRPM = throttleInput * maxRPM;
-           currentRPM = Mathf.Lerp(currentRPM, wantedRPM, Time.deltaTime * powerDelay);
+            //Вычисление оборотов в минуту
+            //  float wantedRPM = throttleInput * maxRPM;
+            float wantedRPM = powerCurve.Evaluate(throttleInput) * maxRPM;
+            currentRPM = Mathf.Lerp(currentRPM, wantedRPM, Time.deltaTime * powerDelay);
 
         }
         #endregion
