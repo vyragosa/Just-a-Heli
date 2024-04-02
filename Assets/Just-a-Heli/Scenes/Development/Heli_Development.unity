@@ -356,7 +356,6 @@ GameObject:
   - component: {fileID: 1166154667}
   - component: {fileID: 1166154670}
   - component: {fileID: 1166154669}
-  - component: {fileID: 1166154668}
   m_Layer: 0
   m_Name: Blur_Quad
   m_TagString: Untagged
@@ -379,28 +378,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 4054568849560647046}
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
---- !u!64 &1166154668
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1166154666}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!23 &1166154669
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1079,9 +1056,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 42e6f2bfc37aa3e45ba5dff8d9ee6bd2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lRotor: {fileID: 813582019}
-  rRotor: {fileID: 1379100467}
+  maxDPS: 100
+  blades:
+  - {fileID: 813582019}
+  - {fileID: 1379100467}
   blurGeo: {fileID: 1166154666}
+  blureTextures:
+  - {fileID: 2800000, guid: fbbf55dfa1024e245badd246696f6cfa, type: 3}
+  - {fileID: 2800000, guid: c981b2c180599d644a9c432b09196a4f, type: 3}
+  - {fileID: 2800000, guid: bc755d4c6ef365945a15b26dbc14bce1, type: 3}
+  - {fileID: 2800000, guid: 8a5e73e576912554a9a6e0f2534c7567, type: 3}
+  - {fileID: 2800000, guid: 8a6f2a277c8266248b48ace30a57a3b8, type: 3}
+  - {fileID: 2800000, guid: 22296aaa2494fb64ca453e13c3ad4459, type: 3}
+  - {fileID: 2800000, guid: 6dc3e3449e0eed949a13e1e5bc062a26, type: 3}
+  - {fileID: 2800000, guid: ed3134fc98a404a41aed092e53506785, type: 3}
+  - {fileID: 2800000, guid: 7068257164979f64fa4e07d401476b4f, type: 3}
+  - {fileID: 2800000, guid: 52c95cced04f28141b39f5ea47ad81dc, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

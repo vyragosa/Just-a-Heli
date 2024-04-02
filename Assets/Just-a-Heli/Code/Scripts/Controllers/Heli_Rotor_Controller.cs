@@ -22,8 +22,8 @@ namespace JaH
         #region Custom Methods
         public void updateRotors(Input_Controller input, float currentRPM)
         {
-            // Debug.Log("Updating Rotor Controller");
-
+            // Debug.Log(currentRPM);
+            
             // вычисление градусов в секунду
             float dps = ((currentRPM * 360f) / 60f) * Time.deltaTime;
 

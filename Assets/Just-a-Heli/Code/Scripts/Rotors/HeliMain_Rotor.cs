@@ -25,7 +25,7 @@ namespace JaH
         public void UpdateRotor(float dps, Input_Controller input)
         {
             // вращение лопастей
-            // Debug.Log("Updating Main Rotor");
+            // Debug.Log(dps);
             transform.Rotate(Vector3.up, dps);
 
             // наклон лопастей 
