@@ -49,7 +49,7 @@ namespace JaH
             //  float wantedRPM = throttleInput * maxRPM;
             float wantedRPM = powerCurve.Evaluate(throttleInput) * maxRPM;
             currentRPM = Mathf.Lerp(currentRPM, wantedRPM, Time.deltaTime * powerDelay);
-            Debug.Log(currentRPM);
+            // Debug.Log(currentRPM);
 
         }
         #endregion
