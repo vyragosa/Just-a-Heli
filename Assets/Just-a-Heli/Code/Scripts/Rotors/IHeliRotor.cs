@@ -7,7 +7,7 @@ namespace JaH
     public interface IHeliRotor    
     {
         #region Methods
-        void UpdateRotor(float dps);
+        void UpdateRotor(float dps, Input_Controller input);
         #endregion
     }
 

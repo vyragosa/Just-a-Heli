@@ -271,6 +271,11 @@ MonoBehaviour:
   blendDistance: 0
   weight: 1
   priority: 0
+--- !u!4 &813582020 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 555365047969851363, guid: 7a29232d7d78ef04dad953e9c9d8925a, type: 3}
+  m_PrefabInstance: {fileID: 4054568849560647040}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &943507964
 GameObject:
   m_ObjectHideFlags: 0
@@ -352,6 +357,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90fcd7483ebc0e3449c8d0828f54d247, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!4 &1352118093 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 610453967685787595, guid: 7a29232d7d78ef04dad953e9c9d8925a, type: 3}
+  m_PrefabInstance: {fileID: 4054568849560647040}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1379100468 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2175667826117536037, guid: 7a29232d7d78ef04dad953e9c9d8925a, type: 3}
+  m_PrefabInstance: {fileID: 4054568849560647040}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1777828482
 GameObject:
   m_ObjectHideFlags: 0
@@ -536,6 +551,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 519833364}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &1927806812 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8484818666787668934, guid: 7a29232d7d78ef04dad953e9c9d8925a, type: 3}
+  m_PrefabInstance: {fileID: 4054568849560647040}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2035430162
 GameObject:
   m_ObjectHideFlags: 0
@@ -798,7 +818,7 @@ PrefabInstance:
       objectReference: {fileID: 1260664535}
     - target: {fileID: 3804404403919255818, guid: 7a29232d7d78ef04dad953e9c9d8925a, type: 3}
       propertyPath: powerDelay
-      value: 0.2
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3804404403919255818, guid: 7a29232d7d78ef04dad953e9c9d8925a, type: 3}
       propertyPath: powerCurve.m_Curve.Array.data[0].inSlope
@@ -901,6 +921,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 98784e0c091792a4694c8ca02afb5b17, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  lRotor: {fileID: 1927806812}
+  rRotor: {fileID: 1352118093}
+  maxPitch: 35
   rotationSpeedModifier: 1.5
 --- !u!114 &4054568849560647044
 MonoBehaviour:
@@ -914,6 +937,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 379dc60d688a7dd43870b71f906102e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  lRotor: {fileID: 813582020}
+  rRotor: {fileID: 1379100468}
+  maxPitch: 35
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

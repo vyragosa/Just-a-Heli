@@ -8,6 +8,9 @@ namespace JaH
     {
         #region Variables
         [Header("Tail Rotor Properties")]
+        public Transform lRotor;
+        public Transform rRotor;
+        public float maxPitch = 45f;
         public float rotationSpeedModifier = 1.5f;
         #endregion
 
@@ -20,10 +23,19 @@ namespace JaH
         #endregion
 
         #region Interface Methods
-        public void UpdateRotor(float dps)
+        public void UpdateRotor(float dps, Input_Controller input)
         {
+            // вращение лопастей
             transform.Rotate(Vector3.right, dps * rotationSpeedModifier);
             // Debug.Log("Updating Tail Rotor");
+
+
+            // наклон лопастей 
+            if (lRotor && rRotor)
+            {
+                lRotor.localRotation = Quaternion.Euler(0f, input.PedalInput * maxPitch, 0f);
+                rRotor.localRotation = Quaternion.Euler(0f, -input.PedalInput * maxPitch, 0f);
+            }
         }
         #endregion
     }

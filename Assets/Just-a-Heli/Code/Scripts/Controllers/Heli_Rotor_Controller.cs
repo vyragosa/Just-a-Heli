@@ -32,7 +32,7 @@ namespace JaH
             {
                 foreach (var rotor in rotors)
                 {
-                    rotor.UpdateRotor(dps);
+                    rotor.UpdateRotor(dps, input);
                 }
             }
         }
