@@ -37,6 +37,12 @@ namespace JaH
             get { return collectiveInput; }
         }
 
+        private float stickyCollective;
+        public float StickyCollective
+        {
+            get { return stickyCollective; }
+        }
+
         private Vector2 cyclicInput;
         public Vector2 CyclicInput
         {
@@ -75,6 +81,7 @@ namespace JaH
                         cyclicInput = keyInput.CyclicInput;
                         pedalInput = keyInput.PedalInput;
                         stickyThrottle = keyInput.StickyThrotle;
+                        stickyCollective = keyInput.StickyCollective;
                         break;
 
                     case InputType.Xbox:
@@ -83,6 +90,7 @@ namespace JaH
                         cyclicInput = xboxInput.CyclicInput;
                         pedalInput = xboxInput.PedalInput;
                         stickyThrottle = xboxInput.StickyThrotle;
+                        stickyCollective = xboxInput.StickyCollective;
                         break;
 
                     default:

@@ -31,8 +31,9 @@ namespace JaH
             // наклон лопастей 
             if(lRotor && rRotor)
             {
-                lRotor.localRotation = Quaternion.Euler(input.CollectiveInput * maxPitch, 0f, 0f);
-                rRotor.localRotation = Quaternion.Euler(-input.CollectiveInput * maxPitch, 0f, 0f);
+                Debug.Log(input.StickyCollective);
+                lRotor.localRotation = Quaternion.Euler(-input.StickyCollective * maxPitch, 0f, 0f);
+                rRotor.localRotation = Quaternion.Euler(input.StickyCollective * maxPitch, 0f, 0f);
             }
         }
         #endregion

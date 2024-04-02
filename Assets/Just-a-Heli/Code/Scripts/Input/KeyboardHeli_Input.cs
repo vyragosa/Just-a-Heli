@@ -31,6 +31,12 @@ namespace JaH
             get { return collectiveInput; }
         }
 
+        protected float stickyCollective = 0f;
+        public float StickyCollective
+        {
+            get { return stickyCollective; }
+        }
+
         protected Vector2 cyclicInput = Vector2.zero;
         public Vector2 CyclicInput
         {
@@ -59,8 +65,9 @@ namespace JaH
             HandlePedal();
 
             // улучшения
-            HandleStickyThrottle();
             ClampInputs();
+            HandleStickyThrottle();
+            HandleStickyCollective();
         }
 
         protected virtual void HandleThrottle()
@@ -98,6 +105,13 @@ namespace JaH
             stickyThrottle += RawThrottleInput * Time.deltaTime;
             stickyThrottle = Mathf.Clamp01(stickyThrottle);
             // Debug.Log(stickyThrottle);
+        }
+
+        protected void HandleStickyCollective()
+        {
+            stickyCollective += collectiveInput * Time.deltaTime;
+            stickyCollective = Mathf.Clamp01(stickyCollective);
+            Debug.Log(stickyCollective);
         }
         #endregion
 
