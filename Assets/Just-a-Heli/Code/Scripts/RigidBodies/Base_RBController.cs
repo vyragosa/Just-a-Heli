@@ -10,7 +10,7 @@ namespace JaH
         #region Variables
         [Header("Base Properties")]
         protected Rigidbody rb;
-        public float weight = 10f;
+        public float weight = 635f;
         public Transform cog;
         #endregion
 

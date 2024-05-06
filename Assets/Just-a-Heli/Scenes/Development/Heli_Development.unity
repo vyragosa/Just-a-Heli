@@ -186,6 +186,37 @@ Transform:
   - {fileID: 2117448364}
   m_Father: {fileID: 519833364}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &57584834
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 57584835}
+  m_Layer: 0
+  m_Name: LookAt
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &57584835
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 57584834}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 1.81, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3220590321461866140}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &307076813
 GameObject:
   m_ObjectHideFlags: 0
@@ -526,6 +557,7 @@ GameObject:
   - component: {fileID: 1777828484}
   - component: {fileID: 1777828483}
   - component: {fileID: 1777828486}
+  - component: {fileID: 1777828487}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -601,7 +633,7 @@ Transform:
   m_GameObject: {fileID: 1777828482}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 17.34, z: -37.64}
+  m_LocalPosition: {x: 0, y: 4.73, z: -17.09}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -667,6 +699,23 @@ MonoBehaviour:
   m_BeforeTransparentBundles: []
   m_BeforeStackBundles: []
   m_AfterStackBundles: []
+--- !u!114 &1777828487
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1777828482}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e091baba92ccad34680681a784d927e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  height: 3.5
+  distance: 6.37
+  rb: {fileID: 2725335306505866619}
+  lookAtTarget: {fileID: 57584835}
+  smoothSpeed: 0.35
 --- !u!1 &1797940264
 GameObject:
   m_ObjectHideFlags: 0
@@ -710,12 +759,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d149d116fa331c941baf5da8abd9673a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxLiftForce: 35
+  maxLiftForce: 25
   mainRotor: {fileID: 4054568849560647044}
   tailForce: 2
-  cyclicForce: 2
+  cyclicForce: 5
   cyclicForceMultiplier: 10
-  autoLevelForce: 4
+  autoLevelForce: 6
 --- !u!1 &2035430162
 GameObject:
   m_ObjectHideFlags: 0
@@ -2335,6 +2384,7 @@ Transform:
   - {fileID: 1919574689174991769}
   - {fileID: 5306306653615325282}
   - {fileID: 6126135281909633021}
+  - {fileID: 57584835}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &3306897958917290926

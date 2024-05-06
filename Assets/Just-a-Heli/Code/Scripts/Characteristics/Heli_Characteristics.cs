@@ -55,7 +55,7 @@ namespace JaH
             if (mainRotor)
             {
                 Vector3 liftForce = transform.up * (Physics.gravity.magnitude + maxLiftForce) * rb.mass;
-                float normalizedRPMs = mainRotor.CurrentRPMs / 1000f;
+                float normalizedRPMs = mainRotor.CurrentRPMs / 500f;
                 // Debug.Log(input.StickyCollective);
                 rb.AddForce(liftForce * Mathf.Pow(normalizedRPMs, 2f) * Mathf.Pow(input.StickyCollective, 2f), ForceMode.Force);
 
