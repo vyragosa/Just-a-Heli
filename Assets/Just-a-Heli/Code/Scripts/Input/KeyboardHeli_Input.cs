@@ -111,7 +111,7 @@ namespace JaH
         {
             stickyCollective += collectiveInput * Time.deltaTime;
             stickyCollective = Mathf.Clamp01(stickyCollective);
-            Debug.Log(stickyCollective);
+            // Debug.Log(stickyCollective);
         }
         #endregion
 

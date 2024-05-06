@@ -11,7 +11,15 @@ namespace JaH
         public Transform lRotor;
         public Transform rRotor;
         public float maxPitch = 35f;
+
         #endregion
+
+        private float currentRPMs;
+        public float CurrentRPMs
+        {
+            get { return currentRPMs; }
+        }
+
 
         #region BuildIn methods
         // Start is called before the first frame update
@@ -26,12 +34,14 @@ namespace JaH
         {
             // вращение лопастей
             // Debug.Log(dps);
-            transform.Rotate(Vector3.up, dps);
+            currentRPMs = (dps / 360) * 60f;
+            // Debug.Log(currentRPMs);
+            transform.Rotate(Vector3.up, dps * Time.deltaTime * 0.5f);
 
             // наклон лопастей 
-            if(lRotor && rRotor)
+            if (lRotor && rRotor)
             {
-                Debug.Log(input.StickyCollective);
+               // Debug.Log(input.StickyCollective);
                 lRotor.localRotation = Quaternion.Euler(-input.StickyCollective * maxPitch, 0f, 0f);
                 rRotor.localRotation = Quaternion.Euler(input.StickyCollective * maxPitch, 0f, 0f);
             }

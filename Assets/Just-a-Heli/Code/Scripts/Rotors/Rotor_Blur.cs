@@ -10,7 +10,7 @@ namespace JaH
     {
         #region Variables
         [Header("Roor Blur Properties")]
-        public float maxDPS = 30f;
+        public float maxDPS = 3000f;
         public List<GameObject> blades = new List<GameObject>();
         public GameObject blurGeo;
 

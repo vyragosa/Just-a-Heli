@@ -8,7 +8,7 @@ namespace JaH
     {
         #region Variables
         [Header("Lift Properties")]
-        public float maxLiftForce = 100f;
+        public float maxLiftForce = 5f;
         public HeliMain_Rotor mainRotor;
         [Space]
 
@@ -39,7 +39,7 @@ namespace JaH
         public void UpdateCharacteristics(Rigidbody rb, Input_Controller input)
         {
             HandleLift(rb, input);
-            HandleCyclic(rb, input);
+           //  HandleCyclic(rb, input);
           //  HandlePedals(rb, input);
 
           //  CalculateAngles();
@@ -52,8 +52,10 @@ namespace JaH
             if (mainRotor)
             {
                 Vector3 liftForce = transform.up * (Physics.gravity.magnitude + maxLiftForce) * rb.mass;
-                // float normalizedRPMs = mainRotor.CurrentRPM / 500f;
+                float normalizedRPMs = mainRotor.CurrentRPMs / 1000f;
+                // Debug.Log(input.StickyCollective);
                 rb.AddForce(liftForce * Mathf.Pow(normalizedRPMs, 2f) * Mathf.Pow(input.StickyCollective, 2f), ForceMode.Force);
+
             }
         }
 

@@ -10,6 +10,7 @@ namespace JaH
     {
         #region Variables
         private List<IHeliRotor> rotors;
+        public float maxDps = 3000f;
         #endregion
 
         #region BuildIn Methods
@@ -23,9 +24,11 @@ namespace JaH
         public void updateRotors(Input_Controller input, float currentRPM)
         {
             // Debug.Log(currentRPM);
-            
+            float dps = ((currentRPM * 360f) / 60f);
+            dps = Mathf.Clamp(dps, 0f, maxDps);
+
             // вычисление градусов в секунду
-            float dps = ((currentRPM * 360f) / 60f) * Time.deltaTime;
+            // float dps = ((currentRPM * 360f) / 60f) * Time.deltaTime;
 
             // обновление винтов 
             if (rotors.Count > 0)
