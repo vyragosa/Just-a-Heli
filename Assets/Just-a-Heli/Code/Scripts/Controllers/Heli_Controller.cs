@@ -13,9 +13,18 @@ namespace JaH
 
         [Header("Helicopter Rotors")]
         public Heli_Rotor_Controller rotorCtrl;
-        private Input_Controller input;
-        #endregion
 
+
+        private Input_Controller input;
+        private Heli_Characteristics characteristics;
+        #endregion
+        #region Built in Methods
+        public override void Start()
+        {
+            base.Start();
+            characteristics = GetComponent<Heli_Characteristics>();
+        }
+        #endregion
 
         #region Custom Methods
 
@@ -55,7 +64,10 @@ namespace JaH
 
         protected virtual void HandleCharaceristics()
         {
-
+            if (characteristics)
+            {
+                characteristics.UpdateCharacteristics(rb, input);
+            }
         }
 
         #endregion
