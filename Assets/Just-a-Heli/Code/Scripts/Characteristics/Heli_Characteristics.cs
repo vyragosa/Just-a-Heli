@@ -18,10 +18,10 @@ namespace JaH
 
         [Header("Cyclic Properties")]
         public float cyclicForce = 2f;
-        public float cyclicForceMultiplier = 1000f;
+        public float cyclicForceMultiplier = 10f;
 
         [Header("Auto Level Properties")]
-        public float autoLevelForce = 2f;
+        public float autoLevelForce = 1f;
 
 
         protected Vector3 flatFwd;
@@ -39,11 +39,14 @@ namespace JaH
         public void UpdateCharacteristics(Rigidbody rb, Input_Controller input)
         {
             HandleLift(rb, input);
-           //  HandleCyclic(rb, input);
-          //  HandlePedals(rb, input);
-
-          //  CalculateAngles();
-          //  AutoLevel(rb);
+            
+            HandleCyclic(rb, input);
+            HandlePedals(rb, input);
+            //  
+            CalculateAngles();
+            AutoLevel(rb);
+            
+            //
         }
 
         protected virtual void HandleLift(Rigidbody rb, Input_Controller input)
@@ -58,8 +61,12 @@ namespace JaH
 
             }
         }
-
-        /*protected virtual void HandleCyclic(Rigidbody rb, Input_Controller input)
+        protected virtual void HandlePedals(Rigidbody rb, Input_Controller input)
+        {
+            //Debug.Log("Handling Pedals");
+            rb.AddTorque(Vector3.up * input.PedalInput * tailForce, ForceMode.Acceleration);
+        }
+        protected virtual void HandleCyclic(Rigidbody rb, Input_Controller input)
         {
             //Debug.Log("Handling Cyclic");
             float cyclicZForce = input.CyclicInput.x * cyclicForce;
@@ -77,11 +84,7 @@ namespace JaH
             rb.AddForce(finalCyclicDir, ForceMode.Force);
         }
 
-         protected virtual void HandlePedals(Rigidbody rb, IP_Input_Controller input)
-         {
-             //Debug.Log("Handling Pedals");
-             rb.AddTorque(Vector3.up * input.PedalInput * tailForce, ForceMode.Acceleration);
-         }
+         
 
          private void CalculateAngles()
          {
@@ -100,7 +103,7 @@ namespace JaH
              //Calculate Angles
              forwardDot = Vector3.Dot(transform.up, flatFwd);
              rightDot = Vector3.Dot(transform.up, flatRight);
-             //Debug.Log(string.Format("Fwd: {0} - Right: {1}", forwardDot.ToString("0.0"), rightDot.ToString("0.0")));
+             // Debug.Log(string.Format("Fwd: {0} - Right: {1}", forwardDot.ToString("0.0"), rightDot.ToString("0.0")));
          }
 
          protected virtual void AutoLevel(Rigidbody rb)
@@ -110,7 +113,7 @@ namespace JaH
 
              rb.AddRelativeTorque(Vector3.right * rightForce, ForceMode.Acceleration);
              rb.AddRelativeTorque(Vector3.forward * forwardForce, ForceMode.Acceleration);
-         }*/
+         }
         #endregion
     }
 
